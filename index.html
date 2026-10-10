@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Soft Pastel Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">Ayesha's <span>Portfolio</span></div>
+        <div class="nav-links">
+            <button class="nav-item active" onclick="switchTab('profile')">Profile</button>
+            <button class="nav-item" onclick="switchTab('quizzes')">Quizzes</button>
+            <button class="nav-item" onclick="switchTab('exams')">Exams</button>
+            <button class="nav-item" onclick="switchTab('activities')">Activities</button>
+        </div>
+    </header>
+
+    <main class="viewport">
+
+        <!-- Tab 1: Profile Display Card -->
+        <section id="profile" class="showcase-card active-view">
+            <div class="profile-header-block">
+                <div class="avatar-circle">
+                    <!-- Replace avatar.jpg with your photo filename -->
+                    <img src="c:\Users\yeshi\Downloads\yeshi.jpg" alt="Profile Picture" class="pfp-src">
+                </div>
+                
+                    <h1>Ayesha Lavinia Bayron Agraviador</h1>
+                    <span class="badge-strand">Bachelor of Science in Computer Science - 3rd Year Student</span>
+                    <p class="summary-paragraph">Welcome to my personal dashboard! I am Ayesha, and this website serves as a comprehensive visual repository documenting my examinations, laboratory activities, and quiz records in DCIT 26 - Application Development and Emerging Technology. May we all have a wonderful semester! :3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 2: Quizzes Gallery -->
+        <section id="quizzes" class="showcase-card">
+            <div class="section-title-wrap">
+                <h2>Quizzes</h2>
+                <p>Click any sheet to expand it to full view.</p>
+            </div>
+            
+            <div class="folder-shelf">
+                <h4 class="shelf-label">Quiz Records</h4>
+                <div class="media-row">
+                    <!-- Make sure to replace these placeholder image sources with your filenames -->
+                    <div class="media-box" onclick="openLightbox(this)">
+                        <img src="c:\Users\yeshi\Downloads\quiz 1.jpg" alt="Quiz 1">
+                    </div>
+                    <div class="media-box" onclick="openLightbox(this)">
+                        <img src="" alt="Quiz 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: Exams Repository -->
+        <section id="exams" class="showcase-card">
+            <div class="section-title-wrap">
+                <h2>Examination Sheets</h2>
+                <p>Click any sheet to expand it to full view.</p>
+            </div>
+            
+            <div class="folder-shelf">
+                <h4 class="shelf-label">Midterm Paper</h4>
+                <div class="single-display-center">
+                    <div class="media-box" onclick="openLightbox(this)">
+                        <img src="c:\Users\yeshi\Downloads\midterm.jpg" alt="Midterm Exam">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 4: Activities Space -->
+        <section id="activities" class="showcase-card">
+            <div class="section-title-wrap">
+                <h2>Laboratory & Performance Tasks</h2>
+                <p>Practical experiments logs and assignment uploads.</p>
+            </div>
+            
+            <div class="folder-shelf">
+                <h4 class="shelf-label">Nothing to see here. :3</h4>
+                <div class="single-display-center">
+                    <div class="media-box" onclick="openLightbox(this)">
+                        <img src="lab_activity.jpg" alt="Soon to be uploaded :3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Fullscreen Lightbox Modal Viewer -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Expanded preview view">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
